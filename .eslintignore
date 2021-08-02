@@ -1,0 +1,6 @@
+node_modulws/
+coverage/
+dist/
+dir/
+doc
+webpack.*.js
