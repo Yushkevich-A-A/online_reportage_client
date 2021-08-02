@@ -19,36 +19,3 @@ body {
 .disable {
   display: none;
 }
-
-.widget-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.widget {
-  width: 500px;
-  height: 600px;
-  margin-top: 30px;
-  background-color: white;
-  border: 1px solid #818181;
-  border-radius: 10px;
-  padding: 15px;
-}
-
-.widget-title-block {
-  margin-bottom: 25px;
-}
-
-.widget-title {
-  color: #000000;
-  text-transform: uppercase;
-}
-
-.widget-news-block {
-  overflow-y: scroll;
-}
