@@ -60,12 +60,13 @@ export default class CreateWidget {
 
     createEventSourse() {
         console.log(this.url);
-        const eventSourse = new EventSource('http://192.168.1.57:7070/sse');
+        const eventSourse = new EventSource('http://192.168.43.97:7070/sse');
             eventSourse.addEventListener('message', (event) => {
-                console.log(event);
             const item = JSON.parse(event.data);
+            console.log(item);
             if (item.status === 'init') {
                 this.drawAllNews(item.data);
+                return;
             }
 
             this.drawEvent(item);
