@@ -56,11 +56,14 @@ export default class CreateWidget {
         dateBlock.textContent = moment(data.date).format('HH:mm DD:MM:YYYY');
         const messageBlock = li.querySelector('.message-block');
         messageBlock.textContent = data.message;
+        console.log(this.listNews)
+        this.listNews.scrollTop = this.listNews.scrollHeight;
+        
     }
 
     createEventSourse() {
         console.log(this.url);
-        const eventSourse = new EventSource('http://192.168.43.97:7070/sse');
+        const eventSourse = new EventSource(`${this.url}/sse`);
             eventSourse.addEventListener('message', (event) => {
             const item = JSON.parse(event.data);
             console.log(item);
